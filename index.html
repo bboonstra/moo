@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>MOO Converter</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <h1>MOO Converter</h1>
+            <textarea
+                id="inputText"
+                placeholder="Enter your text here..."
+            ></textarea>
+            <label for="fileUpload" class="custom-file-upload">
+                <i class="fas fa-upload"></i> Upload .MOO File
+            </label>
+            <input
+                id="fileUpload"
+                type="file"
+                accept=".moo"
+                onchange="readMooFile(this)"
+            />
+            <div class="buttons">
+                <button onclick="convertToMoo()">Convert to .MOO</button>
+                <button onclick="convertFromMoo()">Convert from .MOO</button>
+                <button onclick="swapText()">Swap Input/Output</button>
+                <button onclick="downloadMoo()">Download .MOO</button>
+            </div>
+            <textarea
+                id="outputText"
+                placeholder="Your converted text will appear here..."
+                readonly
+            ></textarea>
+            <a href="https://bboonstra.dev" class="backlink"
+                >See my better work -></a
+            >
+        </div>
+        <script type="module" src="script.js"></script>
+    </body>
+</html>
