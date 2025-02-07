@@ -1,4 +1,4 @@
-import { encode, decode } from "/moo.js";
+import { encode, decode } from "./moo.js";
 
 function convertToMoo() {
     const inputText = document.getElementById("inputText").value;
